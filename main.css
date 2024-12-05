@@ -1,49 +1,161 @@
-:root {
-    --green: #00FF00;
-    --white: #FFFFFF;
-    --black: #000000;
-}
+/* general settings */
+:root { 
+    /*gruvbox colors*/
+    --bg-color: #fbf1c7;
+    --text-color: #3c3836;
+    --highlight-color: #d79921;
+    --correct-color: #689d6a;
+    --incorrect-color: #cc241d;
+    --button-bg: #fabd2f;
+    --button-hover: #d65d0e;
+    --button-active: #b57614;
+    --border-color: #928374;
+    --font-family: "Meslo", monospace;
+  }
 
-body {
-    background: var(--bg);
-    color: var(--fontColor);
-    font-family: helvetica;
-}
-
-li {
-    list-style: circle;
-}
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    align-content: center;
+  }
   
-.list {
-    list-style: square;
-}
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 100px;
+    text-align: center;
+  }
 
-#msg {
-    font-family: monospace;
-}
-
-.light-theme {
-    --bg: var(--green);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
-}
+  /* navigation bar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--highlight-color);
+    z-index: 10;
+    display: flex;  /* Use flexbox to align items horizontally */
+    justify-content: center;  /* Center the links horizontally */
+    padding: 1rem 0;
+  }
   
-  .dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
-}
-
-.btn {
+  .navbar a {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;  /* Adjust padding for spacing between links */
+    text-decoration: none;  /* Remove underlines */
+  }
+  
+  .navbar a:active {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a:hover {
+    background-color: #689d6a;
+    color: white;
+  }
+  /* points counter */
+  .points-counter {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  /* buttons */
+  button {
+    background-color: var(--button-bg);
+    color: #ffffff;
+    font-family: var(--font-family);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: var(--button-active);
+    transform: translateY(1px);
+  }
+  
+  /* submit button */
+  .submit-button {
     position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    bottom: 5%;
+    right: 5%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--highlight-color);
+    color: #ffffff;
     border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
+    border-radius: 4px;
+  }
+  
+  /* question area */
+  .question {
+    background-color: #f2e5bc;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+  }
+  
+  /* form inputs */
+  input[type="text"], textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+  }
+  
+  /* checkbox and button groups */
+  .checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  

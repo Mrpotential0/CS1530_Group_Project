@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS 1530 Website</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>2 Code is 2 Learn 4 Your Future</title>
+  <link rel="stylesheet" href="main.css">
 </head>
-<body class="light-theme">
-    <h1>Task List</h1>
-    <p id="msg">Current tasks:</p>
-    <ul>
-      <li class="list">Add visual styles</li>
-      <li class="list">Add light and dark themes</li>
-      <li>Enable switching the theme</li>
-    </ul>
-    <div>
-        <button class="btn">Dark</button>
-    </div>
-    <script src="app.js"></script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
-  </body>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="home.html"> Home </a>
+    <a href="login.html"> Login</a>
+    <a href="about.html"> About  Us</a>
+  </div>
+
+  <div class="container">
+    <!-- Welcome Section -->
+    <header>
+      <h1>Welcome</h1>
+      <p>Learn Coding Here!</p>
+    </header>
+
+    <!-- Example 1: Radio Button -->
+    <section>
+      <h2>Radio Button Example</h2>
+      <form>
+        <label>
+          <input type="radio" name="example" value="Option 1">
+          Option 1
+        </label>
+      </form>
+    </section>
+
+    <!-- Example 2: Checkbox -->
+    <section>
+      <h2>Checkbox Example</h2>
+      <form>
+        <label>
+          <input type="checkbox" name="exampleCheckbox" value="Option A">
+          Option A
+        </label>
+      </form>
+    </section>
+
+    <!-- Example 3: Text Input -->
+    <section>
+      <h2>Text Input Example</h2>
+      <form>
+        <label for="username">Login:</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+      </form>
+    </section>
+
+    <!-- Example 4: Textarea Input -->
+    <section>
+      <h2>Textarea Example</h2>
+      <form>
+        <label for="answer">Write your answer here:</label>
+        <textarea id="answer" name="answer" rows="4" placeholder="Input Text Here"></textarea>
+      </form>
+    </section>
+
+    <!-- Example 5: Button -->
+    <section>
+      <h2>Button Example</h2>
+      <button>Click Me</button>
+    </section>
+
+    <!-- Submit Button -->
+    <button class="submit-button">Submit</button>
+  </div>
+</body>
 </html>
