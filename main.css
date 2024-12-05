@@ -29,7 +29,7 @@ li {
     --btnFontColor: var(--white);
 }
   
-  .dark-theme {
+.dark-theme {
     --bg: var(--black);
     --fontColor: var(--green);
     --btnBg: var(--white);
