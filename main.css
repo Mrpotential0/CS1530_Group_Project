@@ -12,13 +12,14 @@
     --border-color: #928374;
     --font-family: "Meslo", monospace;
   }
-  
+
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+    align-content: center;
   }
   
   .container {
