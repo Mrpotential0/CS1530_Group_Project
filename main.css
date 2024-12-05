@@ -32,20 +32,36 @@
   }
 
   /* navigation bar */
-  .navbar {
-    width: 100%;
-    background-color: var(--highlight-color);
-    padding: 1rem 0;
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background-color: var(--highlight-color);
+    z-index: 10;
+    display: flex;  /* Use flexbox to align items horizontally */
+    justify-content: center;  /* Center the links horizontally */
+    padding: 1rem 0;
+  }
+  
+  .navbar a {
     color: white;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    z-index: 10;
+    padding: 1rem 2rem;  /* Adjust padding for spacing between links */
+    text-decoration: none;  /* Remove underlines */
   }
   
+  .navbar a:active {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a:hover {
+    background-color: #689d6a;
+    color: white;
+  }
   /* points counter */
   .points-counter {
     position: fixed;
