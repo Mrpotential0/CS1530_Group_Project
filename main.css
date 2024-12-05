@@ -22,17 +22,22 @@
     align-content: center;
   }
   
-  .container {
+  .container{
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
     padding-top: 100px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Vertically center */
+    align-items: center;     /* Horizontally center */
   }
 
   /* navigation bar */
-  .navbar {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -82,12 +87,13 @@
     background-color: var(--button-bg);
     color: #ffffff;
     font-family: var(--font-family);
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;  /* Adjust padding for better size */
     border: 2px solid var(--border-color);
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.2rem;         /* Adjust font size */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 15px;       /* Space between buttons */
   }
   
   button:hover {
@@ -99,6 +105,7 @@
     background-color: var(--button-active);
     transform: translateY(1px);
   }
+  
   
   /* submit button */
   .submit-button {
