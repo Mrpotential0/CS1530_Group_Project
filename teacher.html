@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Teacher</title>
     <link rel="stylesheet" href="main.css">
+    <script src="teacher.js"></script>
 </head>
 
 <body>
@@ -27,30 +28,23 @@
             <form>
               <label>
                 <h3> Easier Question (Java) </h3> 
-                <input type="radio" name="easy" value="easy">                
+                <input type="radio" name="question" value="easy">                
               </label>
+              <label>
+                <h3> Moderately Difficult Question (Java) </h3>
+                <input type="radio" name="question" value="moderate"> 
+              </label>
+              <label>
+                <h3> Harder Question (Java) </h3>
+                <input type="radio" name="question" value="hard">
+              </label>
+              <button class="button-clear" onclick="clearData()"> Clear Local Storage </button>
             </form>
         </section>
-          <i>What is the 64 bit way to express an integer number (named x) in Java that contains integer value 12? (code in Java)</i> <!-- long x = 12; -->
-        <section>
-            <form>
-                <label>
-                    <h3> Moderately Difficult Question (Java) </h3>
-                    <input type="radio" name="moderate" value="moderate">      
-                </label>
-            </form>
-        </section>
-        <i>How do you initialize an integer array (named array) of size 20 with no elements in it? (code in Java)</i> <!-- int[] array = new int[20]; -->
-        <section>
-            <form>
-                <label>
-                    <h3> Harder Question (Java) </h3>
-                    <input type="radio" name="hard" value="hard">                        
-                </label>
-            </form>
-        </section>
-        <i>In string comparison. If we have String x and we want to see if it is equal to String y, what built in method should we use to compare them? (code in Java)</i> <!-- x.equals(y) -->
-        <button class="submit-button" onclick="location.href='teacher.html'">Submit</button>
+        <button class="submit-button" onclick="saveQuestion(event)">Submit</button>
+
+        <h2> Teacher Question Data </h2>
+        <p id="teacherInfo">Loading...</p>
     </div>
 </body>
 </html>
