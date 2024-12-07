@@ -38,13 +38,22 @@
                 <h3> Harder Question (Java) </h3>
                 <input type="radio" name="question" value="hard">
               </label>
+              <label>
+                <h3> Custom Question (Java) </h3>
+                <input type="radio" name="question" value="custom" id="customQuestion">
+                <!-- TODO: When this radio button is clicked I want to display 2 text boxes for the user to type in -->
+
+              </label>
+              
+              <div id="customQuestionInputs" style="display: none;">
+                <input type="text" id="customQuestionText" placeholder="Enter your custom question here">
+                <input type="text" id="customAnswerText" placeholder="Enter your custom answer here">
+              </div>
+
               <button class="button-clear" onclick="clearData()"> Clear Local Storage </button>
             </form>
         </section>
         <button class="submit-button" onclick="saveQuestion(event)">Submit</button>
-
-        <h2> Teacher Question Data </h2>
-        <p id="teacherInfo">Loading...</p>
     </div>
 </body>
 </html>
