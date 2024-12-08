@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Page</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- nav bar -->
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="about.html">About Us</a>
+  </div>
+
+  <!-- points display -->
+  <div class="points-counter">
+    <span id="points">0</span>
+  </div>
+
+  <!-- main -->
+  <div class="container">
+    <!-- question -->
+    <div class="question">
+      <h2>Question: </h2>
+      <p id="question-text">No coding assignment challenges assigned yet! Sit back and relax!</p>
+    </div>
+
+    <!-- answer -->
+    <div class="answer">
+      <textarea id="answer-box" placeholder="Write your code here..."></textarea>
+    </div>
+
+    <!-- submit -->
+    <button class="submit-button" id="submit-btn">Submit</button>
+  </div>
+
+  <!-- feedback -->
+  <div id="popup" style="display: none;" class="popup">
+    <p id="popup-message"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</body>
+</html>
