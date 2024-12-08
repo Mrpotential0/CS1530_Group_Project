@@ -3,43 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Page</title>
+  <title>Student Challenge</title>
   <link rel="stylesheet" href="main.css">
+  <script defer src="student.js"></script>
 </head>
 <body>
-  <!-- nav bar -->
+  <!-- Navigation Bar -->
   <div class="navbar">
     <a href="home.html">Home</a>
     <a href="login.html">Login</a>
     <a href="about.html">About Us</a>
   </div>
 
-  <!-- points display -->
+  <!-- Points Counter -->
   <div class="points-counter">
     <span id="points">0</span>
   </div>
 
-  <!-- main -->
+  <!-- Main Content -->
   <div class="container">
-    <!-- question -->
+    <!-- Question Section -->
     <div class="question">
-      <h2>Question: </h2>
+      <h2>Question:</h2>
       <p id="question-text">No coding assignment challenges assigned yet! Sit back and relax!</p>
     </div>
 
-    <!-- answer -->
+    <!-- Answer Section -->
     <div class="answer">
       <textarea id="answer-box" placeholder="Write your code here..."></textarea>
+      <!-- Feedback Message -->
+      <p id="feedback-message"></p>
     </div>
 
-    <!-- submit -->
+    <!-- Submit Button -->
     <button class="submit-button" id="submit-btn">Submit</button>
-  </div>
-
-  <!-- feedback -->
-  <div id="popup" style="display: none;" class="popup">
-    <p id="popup-message"></p>
-    <button onclick="closePopup()">Close</button>
   </div>
 </body>
 </html>
