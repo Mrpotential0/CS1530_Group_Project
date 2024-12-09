@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Student</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Challenge</title>
+  <link rel="stylesheet" href="main.css">
+  <script defer src="student.js"></script>
 </head>
-
 <body>
-    <!-- Navigation Bar Placeholder-->
-    <div class="navbar">
-        <a href="home.html"> Home </a>
-        <a href="login.html"> Login</a>
-        <a href="about.html"> About  Us</a>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="about.html">About Us</a>
+  </div>
+
+  <!-- Points Counter -->
+  <div class="points-counter">
+    <span id="points">0</span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Question Section -->
+    <div class="question">
+      <h2>Question:</h2>
+      <p id="question-text">No coding assignment challenges assigned yet! Sit back and relax!</p>
     </div>
 
-    <div class="container">
-        <!-- Welcome Section -->
-        <header>
-            <h1>Student Page</h1>
-        </header>
+    <!-- Answer Section -->
+    <div class="answer">
+      <textarea id="answer-box" placeholder="Write your code here..."></textarea>
+      <!-- Feedback Message -->
+      <p id="feedback-message"></p>
     </div>
+
+    <!-- Submit Button -->
+    <button class="submit-button" id="submit-btn">Submit</button>
+  </div>
 </body>
 </html>
