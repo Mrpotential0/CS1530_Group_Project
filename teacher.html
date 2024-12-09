@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="teacher.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar Placeholder-->
+    <div class="navbar">
+        <a href="home.html"> Home </a>
+        <a href="login.html"> Login</a>
+        <a href="about.html"> About  Us</a>
+    </div>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <header>
+            <h1>Teacher Page</h1>
+        </header>
+        <h2> Select Challenge Level to Give to your Students</h2>
+        <section>
+            <form>
+              <label>
+                <h3> Easier Question (Java) </h3> 
+                <input type="radio" name="question" value="easy">                
+              </label>
+              <label>
+                <h3> Moderately Difficult Question (Java) </h3>
+                <input type="radio" name="question" value="moderate"> 
+              </label>
+              <label>
+                <h3> Harder Question (Java) </h3>
+                <input type="radio" name="question" value="hard">
+              </label>
+              <label>
+                <h3> Custom Question (Java) </h3>
+                <input type="radio" name="question" value="custom" id="customQuestion">
+                <!-- TODO: When this radio button is clicked I want to display 2 text boxes for the user to type in -->
+
+              </label>
+              
+              <div id="customQuestionInputs" style="display: none;">
+                <input type="text" id="customQuestionText" placeholder="Enter your custom question here">
+                <input type="text" id="customAnswerText" placeholder="Enter your custom answer here">
+              </div>
+
+              <button class="button-clear" onclick="clearData()"> Clear Local Storage </button>
+            </form>
+        </section>
+        <button class="submit-button" onclick="saveQuestion(event)">Submit</button>
+    </div>
+</body>
+</html>
