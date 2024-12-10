@@ -45,6 +45,25 @@
     font-weight: bold;
     z-index: 10;
   }
+
+  .navbar a {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;  /* Adjust padding for spacing between links */
+    text-decoration: none;  /* Remove underlines */
+  }
+  
+  .navbar a:active {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a:hover {
+    background-color: var(--button-hover);
+    color: white;
+  }
   
   /* points counter */
   .points-counter {
